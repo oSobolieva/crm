@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+    <header>     
+            <nav>
+                <div><a href="/">Головна</a></div>
+                <div>Експортувати</div>
+                <div>Імпортувати</div>
+                <div>Дістати дані по url</div>
+               
+                <div>Вийти</div>
+            </nav>
+    </header>
+    <main>
+        <nav>
+            <ul class="navigation">
+                <li><a href="../restoran/">Ресторан</a> </li>
+                <li><a href="../video/">Відео хостинг</a></li>
+                <li><a href="../store/">Магазин</a> </li>
+            </ul>
+        </nav>
+        <section>
+            <div class="modal-nodata">
+                <span>❌Данних Поки Немає!❌</span>
+            </div>
+           <table>
+               <thead>
+                   <tr>
+                       <th>#</th>
+                       <th>Назва</th>
+                       <th id = "balance">Залишок</th>
+                       <th id = "price">Ціна</th>
+                       <th>Редагувати</th>
+                       <th>Статус</th>
+                       <th>Дата додавання</th>
+                       <th>Видалити</th>
+                   </tr>
+               </thead>
+               <tbody>
+
+               </tbody>
+           </table>
+        </section>
+        <div class="container-modal hide">
+            <div class="modal-window">
+                <span id="modal-close">❌</span>
+                <form class="modal-form">
+                    <label for="id">id</label>
+                    <input type="text" id="id" disabled = "disabled">
+                    <div class="error-input hide">Текст має бути українською!</div>
+                    <label for="name">name</label>
+                    <input type="text" id="name">
+                    <div class="error-input hide">Текст має бути українською!</div>
+                    <label for="price">price</label>
+                    <input type="number" id="price">
+                    <div class="error-input hide">Введіть ціну більше 0</div>
+                    <label for="date">date</label>
+                    <input type="datetime-local" id="date">
+                    <label for="description">description</label>
+                    <input type="text" id="description">
+                    <div class="error-input hide">Текст має бути українською!</div>
+                    <label for="quantity">quantity</label>
+                    <input type="number" id="quantity">
+                    <button type="button" class="save-changes">Save Changes</button>
+                </form>
+            </div>
+        </div>
+        <div class="alert alert-ok hide alert-success">
+            Дані успішно змінені =)
+        </div>
+        <div class="alert alert-reboot hide">
+            Перезавантажте сторінку щоб побачити зміни :)
+        </div>
+        <div class="alert alert-error hide alert-danger">
+            Перевірте правильність введених даних!
+        </div>
+    </main>
+    <footer></footer>
+    <script src="./code/tablestore.js" type="module"></script>
+</body>
+</html>
